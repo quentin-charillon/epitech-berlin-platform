@@ -8,41 +8,99 @@ Developed as a collaborative student project at Epitech.
 
 The Epitech Berlin Student Platform aims to centralize useful information for current and future students, including accommodation, transportation, campus activities, and everyday life in Berlin.
 
-Beyond a traditional informational website, the project includes a custom content management system (CMS), allowing administrators to manage pages and customize website content through a dedicated interface.
+Beyond a traditional informational website, the project includes a custom content management system (CMS), allowing administrators to create and manage pages, customize the website's appearance, and organize content through an interactive visual editor.
+
+The platform combines a student-facing website with an administration interface, providing both an accessible user experience and flexible content management tools.
 
 ## Key Features
 
 ### Student Website
+
 - Information about Epitech Berlin and campus life
-- Practical guides for accommodation and transportation
-- Dynamic pages powered by a CMS
-- Responsive frontend interface
+- Practical guides for accommodation, transportation, and student activities
+- Dynamic pages powered by a custom CMS
+- Responsive layouts and interactive components
+- Consistent visual identity and intuitive navigation
 
 ### Custom Content Management System
-- Create and manage website pages
+
+- Create, edit, and manage dynamic website pages
 - Visual page editor with customizable content blocks
 - Text and image editing tools
-- Customizable headers and footers
+- Drag-and-drop-style content positioning and resizing
+- Customizable headers, footers, and page layouts
 - Page settings and content organization
+- Interactive editing tools and contextual menus
 
-### Administration
+### Administration Interface
+
 - Administrator authentication
 - Protected administration routes
-- User management interface
 - Administration dashboard
+- Page management interface
+- User management interface
+- Website appearance and settings management
 
 ## Tech Stack
 
 | Category | Technologies |
 |---|---|
 | Frontend | React, TypeScript, Vite |
-| Styling | CSS, Tailwind CSS |
+| Styling | CSS |
 | Backend | Node.js, Express.js |
 | Database | MongoDB, Mongoose |
 | Authentication | JWT, bcrypt |
-| Testing | Vitest, React Testing Library |
+| Frontend Testing | Vitest |
 | Development | Docker, Docker Compose |
-| API Documentation | Swagger |
+
+## My Contributions
+
+As part of this collaborative Epitech project, I was responsible for the frontend development, UI/UX design, visual content management system, and administration interfaces.
+
+My work covered both the technical implementation and the visual design of the platform.
+
+### Frontend Development
+
+- Developed the student-facing website using React and TypeScript.
+- Built reusable components and interactive user interfaces.
+- Implemented dynamic page rendering and frontend navigation.
+- Integrated frontend features with the backend API developed by other team members.
+- Improved responsiveness and usability across the platform.
+
+### UI/UX Design
+
+- Designed the visual identity and overall appearance of the website.
+- Defined page layouts, color schemes, typography, and component styling.
+- Created intuitive navigation and consistent interface patterns.
+- Designed the student website and administration interfaces.
+- Focused on accessibility, readability, and user experience.
+
+### Custom CMS Development
+
+- Developed the visual page editor used to create and customize website pages.
+- Implemented editable text, images, and customizable content blocks.
+- Built interactive tools for positioning, resizing, and editing elements.
+- Developed contextual menus and editing controls.
+- Implemented website customization features, including headers, footers, and page layouts.
+
+### Administration Interface
+
+- Developed the administration dashboard and management interfaces.
+- Created interfaces for managing pages, users, and website settings.
+- Implemented frontend interactions for administrative features.
+- Integrated administration components with the application's backend services.
+
+### Testing and Debugging
+
+- Tested frontend components and interactions.
+- Identified and fixed interface bugs.
+- Improved the stability and maintainability of frontend features.
+
+### Team Collaboration
+
+This project was developed collaboratively with other Epitech students.
+
+My responsibilities focused on frontend development, UI/UX design, the custom CMS, and administration interfaces. Backend development and database management were handled by other team members.
 
 ## Project Structure
 
@@ -61,31 +119,42 @@ epitech-berlin-platform/
 - Node.js and npm
 - A MongoDB database (local or MongoDB Atlas)
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/quentin-charillon/epitech-berlin-platform.git
 cd epitech-berlin-platform
 ```
 
-### 2. Configure the backend
+### 2. Configure the Backend
 
 ```bash
 cd back
 npm install
 ```
 
-Copy `.env.example` to `.env` and configure the required environment variables, including `MONGO_URI` and `JWT_SECRET`.
+Copy `.env.example` to `.env` and configure the required environment variables:
 
-### 3. Start the backend
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+ADMIN_EMAIL=admin@example.com
+ADMIN_PASSWORD=your_admin_password
+ADMIN_NAME=Admin
+```
+
+Never commit real credentials or environment files to the repository.
+
+### 3. Start the Backend
 
 ```bash
 npm run dev
 ```
 
-### 4. Start the frontend
+### 4. Start the Frontend
 
-In a separate terminal:
+Open a separate terminal from the repository root:
 
 ```bash
 cd front
@@ -93,26 +162,40 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:5173` in your browser.
+The frontend should be available at:
+
+http://localhost:5173
 
 ## Screenshots
 
-*Screenshots of the student website, administration dashboard, and visual CMS editor will be added here.*
+*Screenshots will be added to demonstrate the interface and main features of the platform.*
 
-## Collaboration
+### Student Website
 
-This platform was developed as a collaborative Epitech student project.
+*Homepage and student information pages.*
 
-The repository showcases the application architecture, frontend and backend development, and custom content management functionality.
+### Administration Dashboard
+
+*Administration interface and website management tools.*
+
+### Visual CMS Editor
+
+*Interactive page editor and content customization features.*
 
 ## Project Status
 
-Academic team project. The repository contains the source code and local development configuration.
+Academic collaborative project developed at Epitech.
 
-## Author
+This repository showcases the application's frontend architecture, custom CMS, administration interfaces, and supporting backend services.
+
+## Author & Contributors
 
 **Quentin Charillon**
 
-Epitech student | Software Development
+Epitech Student | Frontend Development | UI/UX Design | Full-Stack Project Experience
+
+**Main contributions:** Frontend development, UI/UX design, custom CMS, and administration interfaces.
+
+**Backend and database:** Developed by other project team members.
 
 [GitHub Profile](https://github.com/quentin-charillon)
