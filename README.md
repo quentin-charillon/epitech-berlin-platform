@@ -172,19 +172,19 @@ http://localhost:5173
 
 ### Homepage
 
-![Homepage](screenshots/homepage.png)
+(screenshots/homepage.png)
 
 ### Museums Page
 
-![Museums Page](screenshots/museumspage.png)
+(screenshots/museumspage.png)
 
 ### Administration Dashboard
 
-![Administration Dashboard](screenshots/dashboardpage.png)
+(screenshots/dashboardpage.png)
 
 ### Visual CMS Editor
 
-![Visual CMS Editor](screenshots/editpage.png)
+(screenshots/editpage.png)
 
 
 
