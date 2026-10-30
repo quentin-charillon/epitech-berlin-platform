@@ -172,19 +172,27 @@ http://localhost:5173
 
 ### Homepage
 
-(screenshots/homepage.png)
+![screenshot1](screenshots/homepage.png)
+
+### studentLife
+
+![screenshot2](screenshots/studentlife.png)s
+
+### activity
+
+![screenshot3](screenshots/activitypage.png)
 
 ### Museums Page
 
-(screenshots/museumspage.png)
+![screenshot4](screenshots/museumspage.png)
 
 ### Administration Dashboard
 
-(screenshots/dashboardpage.png)
+![screenshot5](screenshots/dashboardpage.png)
 
 ### Visual CMS Editor
 
-(screenshots/editpage.png)
+![screenshot6](screenshots/editpage.png)
 
 
 
