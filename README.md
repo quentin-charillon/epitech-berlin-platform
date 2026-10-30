@@ -176,7 +176,7 @@ http://localhost:5173
 
 ### studentLife
 
-![screenshot2](screenshots/studentlife.png)s
+![screenshot2](screenshots/studentlife.png)
 
 ### activity
 
@@ -193,20 +193,6 @@ http://localhost:5173
 ### Visual CMS Editor
 
 ![screenshot6](screenshots/editpage.png)
-
-
-
-### Student Website
-
-*Homepage and student information pages.*
-
-### Administration Dashboard
-
-*Administration interface and website management tools.*
-
-### Visual CMS Editor
-
-*Interactive page editor and content customization features.*
 
 ## Project Status
 
