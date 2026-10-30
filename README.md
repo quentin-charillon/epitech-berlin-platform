@@ -167,19 +167,25 @@ The frontend should be available at:
 http://localhost:5173
 
 
+
 ## Screenshots
 
 ### Homepage
-![Homepage](screenshots/Capture d'écran 2026-10-30 165740.png)
+
+![Homepage](screenshots/homepage.png)
 
 ### Museums Page
-![Museums Page](screenshots/Capture d'écran 2026-10-30 165800.png)
+
+![Museums Page](screenshots/museumspage.png)
 
 ### Administration Dashboard
-![Administration Dashboard](screenshots/Capture d'écran 2026-10-30 165848.png)
+
+![Administration Dashboard](screenshots/dashboardpage.png)
 
 ### Visual CMS Editor
-![Visual CMS Editor](screenshots/Capture d'écran 2026-10-30 165907.png)
+
+![Visual CMS Editor](screenshots/editpage.png)
+
 
 
 ### Student Website
