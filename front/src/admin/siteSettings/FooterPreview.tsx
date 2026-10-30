@@ -1,0 +1,257 @@
+import { styleToCss } from "./utils";
+import { resizeHandleStyle } from "./QuickMenus";
+
+export function FooterPreview({
+  previewOuterRef,
+  previewRef,
+  realPreviewWidth,
+  previewHeight,
+  previewScale,
+  footer,
+  blocks,
+  selectedBlockId,
+  editingTextBlockId,
+  beginDrag,
+  beginResize,
+  beginBackgroundDrag,
+  openBlockMenu,
+  openCanvasMenu,
+  updateBlock,
+  openBlockLink,
+  setSelectedBlockId,
+  setEditingTextBlockId,
+}) {
+  const previewBackgroundPosition = `${
+    Number.isFinite(footer.backgroundPositionX) ? footer.backgroundPositionX : 50
+  }% ${Number.isFinite(footer.backgroundPositionY) ? footer.backgroundPositionY : 50}%`;
+
+  const hasBackgroundImage =
+    footer.backgroundType === "image" &&
+    typeof footer.backgroundImage === "string" &&
+    footer.backgroundImage.trim() !== "";
+
+  return (
+    <div ref={previewOuterRef} className="adminPreviewWrapper" style={{ marginBottom: 24 }}>
+      <div
+        style={{
+          width: realPreviewWidth * previewScale,
+          height: previewHeight * previewScale,
+          margin: "0 auto",
+          position: "relative",
+        }}
+      >
+        <div
+          ref={previewRef}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: realPreviewWidth,
+            height: previewHeight,
+            transform: `scale(${previewScale})`,
+            transformOrigin: "top left",
+            overflow: "hidden",
+            backgroundColor: footer.backgroundColor || "#1a1a2e",
+            backgroundImage: hasBackgroundImage
+              ? `linear-gradient(rgba(0,0,0,${footer.overlayOpacity ?? 0.35}), rgba(0,0,0,${footer.overlayOpacity ?? 0.35})), url(${footer.backgroundImage})`
+              : "none",
+            backgroundSize: "cover",
+            backgroundPosition: previewBackgroundPosition,
+            backgroundRepeat: "no-repeat",
+            border: "1px solid rgba(255,255,255,0.08)",
+            userSelect: "none",
+            cursor: hasBackgroundImage ? "grab" : "default",
+          }}
+          onContextMenu={openCanvasMenu}
+          onMouseDown={(e) => {
+            if (e.target === previewRef.current && hasBackgroundImage) {
+              beginBackgroundDrag(e);
+              return;
+            }
+            setSelectedBlockId(null);
+            setEditingTextBlockId(null);
+          }}
+        >
+          {blocks.map((block) => {
+            const isSelected = selectedBlockId === block.id;
+            const commonStyle = {
+              position: "absolute" as const,
+              left: block.x ?? 0,
+              top: block.y ?? 0,
+              cursor: editingTextBlockId === block.id ? "text" : "move",
+              outline: isSelected ? "2px solid #7aa2ff" : "1px dashed rgba(255,255,255,0.18)",
+              outlineOffset: 2,
+              zIndex: isSelected ? 5 : 3,
+            };
+
+            if (block.type === "text") {
+              return (
+                <div
+                  key={block.id}
+                  onMouseDown={(e) => beginDrag(e, block)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if ((e.ctrlKey || e.metaKey) && block.linkTarget) {
+                      openBlockLink(block);
+                      return;
+                    }
+                    setSelectedBlockId(block.id);
+                  }}
+                  onContextMenu={(e) => openBlockMenu(e, block.id)}
+                  onDoubleClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedBlockId(block.id);
+                    setEditingTextBlockId(block.id);
+                  }}
+                  style={{
+                    ...commonStyle,
+                    color: block.color ?? "#ffffff",
+                    fontSize: block.fontSize ?? 20,
+                    whiteSpace: "pre-wrap",
+                    padding: "2px 4px",
+                    maxWidth: 500,
+                    ...styleToCss(block.fontStyle),
+                  }}
+                >
+                  {editingTextBlockId === block.id ? (
+                    <textarea
+                      autoFocus
+                      value={block.text ?? ""}
+                      onChange={(e) => updateBlock(block.id, { text: e.target.value })}
+                      onBlur={() => setEditingTextBlockId(null)}
+                      onMouseDown={(e) => e.stopPropagation()}
+                      style={{
+                        minWidth: 120,
+                        minHeight: 36,
+                        background: "rgba(0,0,0,0.45)",
+                        color: block.color ?? "#ffffff",
+                        border: "1px solid rgba(255,255,255,0.25)",
+                        borderRadius: 8,
+                        padding: "6px 8px",
+                        outline: "none",
+                        resize: "none",
+                        fontSize: block.fontSize ?? 20,
+                        fontFamily: "inherit",
+                        ...styleToCss(block.fontStyle),
+                      }}
+                    />
+                  ) : (
+                    block.text || "Text"
+                  )}
+                  <div onMouseDown={(e) => beginResize(e, block)} style={resizeHandleStyle} />
+                </div>
+              );
+            }
+
+            if (block.type === "image") {
+              return (
+                <div
+                  key={block.id}
+                  onMouseDown={(e) => beginDrag(e, block)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if ((e.ctrlKey || e.metaKey) && block.linkTarget) {
+                      openBlockLink(block);
+                      return;
+                    }
+                    setSelectedBlockId(block.id);
+                    setEditingTextBlockId(null);
+                  }}
+                  onContextMenu={(e) => openBlockMenu(e, block.id)}
+                  style={{
+                    ...commonStyle,
+                    width: block.w ?? 140,
+                    height: block.h ?? 80,
+                    borderRadius: block.borderRadius ?? 12,
+                    overflow: "hidden",
+                    background: "rgba(255,255,255,0.08)",
+                  }}
+                >
+                  {block.src ? (
+                    <img
+                      src={block.src}
+                      alt=""
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                        pointerEvents: "none",
+                      }}
+                    />
+                  ) : (
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: "rgba(255,255,255,0.65)",
+                        fontSize: 14,
+                        pointerEvents: "none",
+                      }}
+                    >
+                      Image
+                    </div>
+                  )}
+                  <div onMouseDown={(e) => beginResize(e, block)} style={resizeHandleStyle} />
+                </div>
+              );
+            }
+
+            if (block.type === "box") {
+              return (
+                <div
+                  key={block.id}
+                  onMouseDown={(e) => beginDrag(e, block)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if ((e.ctrlKey || e.metaKey) && block.linkTarget) {
+                      openBlockLink(block);
+                      return;
+                    }
+                    setSelectedBlockId(block.id);
+                    setEditingTextBlockId(null);
+                  }}
+                  onContextMenu={(e) => openBlockMenu(e, block.id)}
+                  style={{
+                    ...commonStyle,
+                    width: block.w ?? 180,
+                    height: block.h ?? 70,
+                    background: block.color ?? "#5b4cf0",
+                    borderRadius: block.borderRadius ?? 16,
+                  }}
+                >
+                  <div onMouseDown={(e) => beginResize(e, block)} style={resizeHandleStyle} />
+                </div>
+              );
+            }
+
+            return null;
+          })}
+
+          <div
+            style={{
+              position: "absolute",
+              bottom: 8,
+              left: "50%",
+              transform: "translateX(-50%)",
+              background: "rgba(255,255,255,0.06)",
+              borderRadius: 4,
+              padding: "2px 10px",
+              fontSize: 10,
+              fontWeight: 700,
+              color: "rgba(255,255,255,0.3)",
+              letterSpacing: 2,
+              pointerEvents: "none",
+              userSelect: "none",
+            }}
+          >
+            FOOTER
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

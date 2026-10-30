@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Builds
+dist/
+build/
+
+# Logs
+*.log
+
+# Local files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Old Git history backup
+.git-backup/
+
+# Local development tools
+.claude/
+.vs/
+
+# Internal document (review before publishing)
+project_extension_request.html

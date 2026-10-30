@@ -1,0 +1,61 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./back
+      dockerfile: Dockerfile
+    container_name: backend
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=development
+      - PORT=5000
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      - ./back/src:/app/src
+      - ./back/package.json:/app/package.json
+      - /app/node_modules
+    restart: unless-stopped
+    depends_on:
+      - mongo
+    networks:
+      - epitech-network
+
+  frontend:
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:5000
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+    volumes:
+      - ./front/src:/app/src
+      - ./front/public:/app/public
+      - /app/node_modules
+    restart: unless-stopped
+    depends_on:
+      - backend
+    networks:
+      - epitech-network
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - epitech-network
+
+volumes:
+  mongo-data: {}
+
+networks:
+  epitech-network:
+    driver: bridge
