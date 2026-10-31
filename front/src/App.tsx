@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import NavBar from "./components/Navbar";
 import SiteFooter from "./components/SiteFooter";
 
 import AdminLayout from "./admin/AdminLayout";
