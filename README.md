@@ -237,7 +237,7 @@ A demo administrator account is available for recruiters, developers, and visito
 
 **Demo Credentials:**
 - **Email:** quentin.charillon@epitech.eu
-- **Password:** [Demo password provided separately]
+- **Password:** Hermes2004
 
 With this account, you can:
 - Explore the administration dashboard
