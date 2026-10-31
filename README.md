@@ -211,18 +211,45 @@ Epitech Student | Frontend Development | UI/UX Design | Full-Stack Project Exper
 **Backend and database:** Developed by other project team members.
 
 
-## 🌐 Live Demo
 
-**The platform is live and fully functional!**
+## 🌐 Live Demo & Admin Access
 
-🔗 **[Visit the Epitech Berlin Student Platform](https://epitech-berlin-platform.vercel.app/)**
+The Epitech Berlin Student Platform is deployed and available online.
 
-Explore the student website, discover campus life in Berlin, and browse the different pages created with our custom CMS.
+### Student Website
 
-**Deployment Architecture:**
-- Frontend: Vercel
-- Backend: Render
-- Database: MongoDB Atlas
+🔗 **[Visit the Student Platform](https://epitech-berlin-platform.vercel.app/)**
+
+Explore the website, discover student life in Berlin, and navigate through the different pages.
+
+### 🛠️ Try the Administration Dashboard
+
+🔗 **[Access the Admin Dashboard](https://epitech-berlin-platform.vercel.app/admin/login)**
+
+Want to explore how the platform works behind the scenes?
+
+A demo administrator account is available for recruiters, developers, and visitors interested in testing the custom CMS.
+
+**Demo Credentials:**
+- **Email:** quentin.charillon@epitech.eu
+- **Password:** [Demo password provided separately]
+
+With this account, you can:
+- Explore the administration dashboard
+- Create and edit website pages
+- Customize content using the visual CMS editor
+- Modify text, images, headers, and footers
+- Test the interactive editing tools
+- Explore website settings and customization features
+
+Feel free to experiment with the CMS and discover its capabilities!
+
+### Deployment Architecture
+
+- **Frontend:** Vercel
+- **Backend:** Render
+- **Database:** MongoDB Atlas
+
 
 
 [GitHub Profile](https://github.com/quentin-charillon)
