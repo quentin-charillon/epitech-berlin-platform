@@ -210,4 +210,19 @@ Epitech Student | Frontend Development | UI/UX Design | Full-Stack Project Exper
 
 **Backend and database:** Developed by other project team members.
 
+
+## 🌐 Live Demo
+
+**The platform is live and fully functional!**
+
+🔗 **[Visit the Epitech Berlin Student Platform](https://epitech-berlin-platform.vercel.app/)**
+
+Explore the student website, discover campus life in Berlin, and browse the different pages created with our custom CMS.
+
+**Deployment Architecture:**
+- Frontend: Vercel
+- Backend: Render
+- Database: MongoDB Atlas
+
+
 [GitHub Profile](https://github.com/quentin-charillon)
