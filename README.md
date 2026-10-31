@@ -215,6 +215,11 @@ Epitech Student | Frontend Development | UI/UX Design | Full-Stack Project Exper
 ## 🌐 Live Demo & Admin Access
 
 The Epitech Berlin Student Platform is deployed and available online.
+Please note: This project uses Render's free hosting tier for the backend, which automatically goes to sleep after a period of inactivity.
+
+As a result, the first visit may take approximately 30–60 seconds to load data while the server wakes up.
+
+Thank you for your patience! Subsequent requests should be much faster
 
 ### Student Website
 
