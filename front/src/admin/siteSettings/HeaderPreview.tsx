@@ -1,4 +1,4 @@
-import { NavigationBar } from "../../components/Navbar";
+import { NavigationBar } from "../../components/NavBar";
 import { styleToCss } from "./utils";
 import { resizeHandleStyle } from "./QuickMenus";
 
