@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import NavBar from "./components/Navbar";
+import NavBar from "./components/NavBar";
 import SiteFooter from "./components/SiteFooter";
 
 import AdminLayout from "./admin/AdminLayout";
@@ -21,7 +21,7 @@ function AppLayout() {
 
   return (
     <>
-      <Navbar />
+      <NavBar />
       <main>
         <Routes>
           {/* LOGIN ADMIN (pas protégé) */}
