@@ -170,7 +170,7 @@ http://localhost:5173
 
 ### Page d'accueil
 
-[Visiter la plateforme étudiante](screenshots/activity.png)
+![Page d'accueil](screenshots/accueil.png)
 
 ### Vie étudiante
 
@@ -230,7 +230,7 @@ Explorez le site web, découvrez la vie étudiante à Berlin et naviguez entre l
 
 Vous souhaitez découvrir comment fonctionne la plateforme en coulisses ?
 
-**[Visiter la plateforme étudiante](https://epitech-berlin-platform.vercel.app/admin)**
+**[Visiter le coté admin(https://epitech-berlin-platform.vercel.app/admin)**
 
 Un compte administrateur de démonstration est disponible pour les recruteurs, les développeurs et les visiteurs souhaitant tester le CMS personnalisé.
 
