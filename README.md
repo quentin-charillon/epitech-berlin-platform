@@ -170,7 +170,7 @@ http://localhost:5173
 
 ### Page d'accueil
 
-screenshot1
+[Visiter la plateforme étudiante](screenshots/activity.png)
 
 ### Vie étudiante
 
@@ -230,13 +230,15 @@ Explorez le site web, découvrez la vie étudiante à Berlin et naviguez entre l
 
 Vous souhaitez découvrir comment fonctionne la plateforme en coulisses ?
 
+**[Visiter la plateforme étudiante](https://epitech-berlin-platform.vercel.app/admin)**
+
 Un compte administrateur de démonstration est disponible pour les recruteurs, les développeurs et les visiteurs souhaitant tester le CMS personnalisé.
 
 **Identifiants de démonstration :**
 
 Email : quentin.charillon@epitech.eu
 
-Mot de passe : [mot de passe du compte de démonstration]
+Mot de passe : Hermes2004
 
 Avec ce compte, vous pouvez :
 
