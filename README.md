@@ -190,7 +190,7 @@ http://localhost:5173
 
 ### Éditeur visuel CMS
 
-![Page d'accueil](screenshots/editorpage.png)
+![Page d'accueil](screenshots/editpage.png)
 
 ## Statut du projet
 
