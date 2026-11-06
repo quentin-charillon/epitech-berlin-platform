@@ -12,6 +12,7 @@ import AdminUsers from "./admin/AdminUsers";
 import AdminHelp from "./admin/AdminHelp";
 import AdminLogin from "./admin/AdminLogin";
 import ProtectedRoute from "./admin/ProtectedRoute";
+import BackendAvailabilityGate from "./components/BackendAvailabilityGate";
 
 import CMSPage from "./pages/CMSPage";
 
@@ -61,7 +62,9 @@ function AppLayout() {
 export default function App() {
   return (
     <BrowserRouter>
-      <AppLayout />
+      <BackendAvailabilityGate>
+        <AppLayout />
+      </BackendAvailabilityGate>
     </BrowserRouter>
   );
 }
