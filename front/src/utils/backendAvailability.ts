@@ -72,11 +72,21 @@ export async function waitForBackend(
     );
 
     try {
-      const response = await fetchImpl(`${baseUrl}/api/health/ready`, {
+      let response = await fetchImpl(`${baseUrl}/api/health/ready`, {
         method: "GET",
         cache: "no-store",
         signal: requestController.signal,
       });
+
+      // Compatibility for a backend deployment that still exposes the legacy
+      // health route. This is a single GET fallback, never a retry of a write.
+      if (response.status === 404) {
+        response = await fetchImpl(`${baseUrl}/api/health`, {
+          method: "GET",
+          cache: "no-store",
+          signal: requestController.signal,
+        });
+      }
 
       if (response.ok) return;
       if (!RETRYABLE_STATUSES.has(response.status)) {

@@ -100,7 +100,7 @@ describe("waitForBackend", () => {
     expect(vi.getTimerCount()).toBe(0);
   });
 
-  it.each([401, 403, 404])("does not retry definitive HTTP %s errors", async (status) => {
+  it.each([401, 403])("does not retry definitive HTTP %s errors", async (status) => {
     const fetchImpl = vi.fn().mockResolvedValue(new Response(null, { status }));
 
     await expect(waitForBackend("https://api.example", { fetchImpl })).rejects.toEqual(
@@ -110,6 +110,31 @@ describe("waitForBackend", () => {
       }),
     );
     expect(fetchImpl).toHaveBeenCalledTimes(1);
+  });
+
+  it("uses the legacy health endpoint once when the readiness route is missing", async () => {
+    const fetchImpl = vi.fn()
+      .mockResolvedValueOnce(new Response(null, { status: 404 }))
+      .mockResolvedValueOnce(ready());
+
+    await expect(waitForBackend("https://api.example", { fetchImpl })).resolves.toBeUndefined();
+
+    expect(fetchImpl).toHaveBeenCalledTimes(2);
+    expect(fetchImpl).toHaveBeenNthCalledWith(
+      2,
+      "https://api.example/api/health",
+      expect.objectContaining({ method: "GET" }),
+    );
+  });
+
+  it("reports a configuration error when both health endpoints are missing", async () => {
+    const fetchImpl = vi.fn().mockResolvedValue(new Response(null, { status: 404 }));
+
+    await expect(waitForBackend("https://api.example", { fetchImpl })).rejects.toMatchObject({
+      reason: "configuration",
+      status: 404,
+    });
+    expect(fetchImpl).toHaveBeenCalledTimes(2);
   });
 
   it("only issues GET requests and never retries a write operation", async () => {
