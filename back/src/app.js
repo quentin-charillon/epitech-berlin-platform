@@ -1,6 +1,7 @@
 require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
+const mongoose = require("mongoose");
 
 const authRoutes = require("./routes/auth.routes");
 const pagesRoutes = require("./routes/pages.routes");
@@ -64,6 +65,17 @@ app.get("/api/health", (req, res) => {
   res.json({
     status: "ok",
     uptime: process.uptime()
+  });
+});
+
+// Lightweight readiness probe used by the frontend while a Render instance wakes up.
+// It does not query MongoDB; readyState is maintained by the existing connection.
+app.get("/api/health/ready", (req, res) => {
+  const databaseReady = mongoose.connection.readyState === 1;
+
+  res.status(databaseReady ? 200 : 503).json({
+    status: databaseReady ? "ready" : "starting",
+    database: databaseReady ? "connected" : "unavailable"
   });
 });
 
