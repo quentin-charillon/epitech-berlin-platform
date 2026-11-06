@@ -1,79 +1,49 @@
+# Epitech Berlin | Plateforme étudiante
 
-# 🇩🇪 Epitech Berlin | Plateforme étudiante
+Une plateforme web full-stack conçue pour aider les étudiants à découvrir Epitech Berlin, explorer la vie sur le campus et accéder à des informations pratiques grâce à un système de gestion de contenu personnalisable.
 
-### Une plateforme web pour découvrir Epitech Berlin et faciliter la vie étudiante
+Développée dans le cadre d'un projet étudiant collaboratif à Epitech.
 
-**Epitech Berlin Student Platform** est une application web full-stack conçue pour aider les étudiants à découvrir le campus d'Epitech Berlin, explorer la vie étudiante et accéder à des informations pratiques.
+## Présentation
 
-Le projet comprend également un **système de gestion de contenu (CMS) personnalisé**, permettant aux administrateurs de modifier les pages et l'apparence du site grâce à un éditeur visuel interactif.
+La plateforme étudiante Epitech Berlin a pour objectif de centraliser les informations utiles aux étudiants actuels et futurs, notamment concernant le logement, les transports, les activités sur le campus et la vie quotidienne à Berlin.
 
-**Projet collaboratif développé dans le cadre de notre formation à Epitech.**
+Au-delà d'un site web informatif traditionnel, le projet comprend un système de gestion de contenu (CMS) personnalisé, permettant aux administrateurs de créer et de gérer des pages, de personnaliser l'apparence du site et d'organiser le contenu grâce à un éditeur visuel interactif.
 
-🌐 **[Découvrir la plateforme étudiante](https://epitech-berlin-platform.vercel.app/)**
+La plateforme combine un site destiné aux étudiants et une interface d'administration, offrant à la fois une expérience utilisateur accessible et des outils flexibles de gestion de contenu.
 
----
+## Fonctionnalités principales
 
-## 📖 Présentation du projet
+### Site étudiant
 
-L'objectif de la plateforme est de centraliser les informations utiles aux étudiants actuels et futurs d'Epitech Berlin.
+- Informations sur Epitech Berlin et la vie sur le campus
+- Guides pratiques sur le logement, les transports et les activités étudiantes
+- Pages dynamiques alimentées par un CMS personnalisé
+- Interfaces responsive et composants interactifs
+- Identité visuelle cohérente et navigation intuitive
 
-Elle regroupe notamment des informations sur :
+### Système de gestion de contenu (CMS) personnalisé
 
-- Le campus et la vie étudiante.
-- Les logements et les possibilités d'hébergement.
-- Les transports à Berlin.
-- Les activités étudiantes.
-- Les restaurants et les lieux à découvrir.
-- Les informations pratiques du quotidien.
+- Création, modification et gestion de pages web dynamiques
+- Éditeur visuel de pages avec des blocs de contenu personnalisables
+- Outils de modification de textes et d'images
+- Positionnement et redimensionnement des contenus par glisser-déposer
+- Personnalisation des en-têtes, pieds de page et mises en page
+- Paramètres des pages et organisation du contenu
+- Outils d'édition interactifs et menus contextuels
 
-Au-delà d'un simple site informatif, le projet intègre un **CMS développé sur mesure**.
+### Interface d'administration
 
-Ce système permet aux administrateurs de créer et modifier des pages, personnaliser l'apparence du site et organiser les contenus à travers un éditeur visuel.
+- Authentification des administrateurs
+- Protection des routes d'administration
+- Tableau de bord administrateur
+- Interface de gestion des pages
+- Interface de gestion des utilisateurs
+- Gestion de l'apparence et des paramètres du site web
 
-La plateforme associe ainsi un site accessible aux étudiants et une interface d'administration complète.
+## Technologies utilisées
 
----
-
-## ✨ Fonctionnalités principales
-
-### 🌍 Site étudiant
-
-- Informations sur Epitech Berlin et la vie sur le campus.
-- Guides pratiques sur les logements, les transports et les activités.
-- Pages dynamiques alimentées par le CMS.
-- Interface responsive adaptée aux différentes tailles d'écran.
-- Composants interactifs.
-- Navigation intuitive et identité visuelle cohérente.
-
-### 🎨 Système de gestion de contenu (CMS)
-
-Le CMS a été développé spécifiquement pour cette plateforme.
-
-Il permet notamment de :
-
-- Créer, modifier et gérer des pages dynamiques.
-- Personnaliser les contenus avec un éditeur visuel.
-- Ajouter et modifier des blocs de texte et des images.
-- Positionner et redimensionner des éléments de manière interactive.
-- Personnaliser les en-têtes, pieds de page et mises en page.
-- Organiser les contenus et configurer les pages.
-- Utiliser des menus contextuels et des outils d'édition interactifs.
-
-### 🛠️ Interface d'administration
-
-- Authentification des administrateurs.
-- Protection des routes d'administration.
-- Tableau de bord.
-- Gestion des pages.
-- Interface de gestion des utilisateurs.
-- Personnalisation de l'apparence du site.
-- Gestion des paramètres de la plateforme.
-
----
-
-## 💻 Technologies utilisées
-
-| Domaine | Technologies |
+| Catégorie | Technologies |
 |---|---|
 | Frontend | React, TypeScript, Vite |
 | Styles | CSS |
@@ -82,102 +52,72 @@ Il permet notamment de :
 | Authentification | JWT, bcrypt |
 | Tests frontend | Vitest |
 | Développement | Docker, Docker Compose |
-| Hébergement frontend | Vercel |
-| Hébergement backend | Render |
-| Base de données cloud | MongoDB Atlas |
 
----
+## Mes contributions
 
-## 👨‍💻 Mes contributions personnelles
+Dans le cadre de ce projet collaboratif à Epitech, j'étais responsable du développement frontend, du design UI/UX, du système de gestion de contenu visuel et des interfaces d'administration.
 
-Dans le cadre de ce projet collaboratif à Epitech, j'ai principalement été responsable du **développement frontend, du design UI/UX, du CMS visuel et des interfaces d'administration**.
+Mon travail comprenait à la fois l'implémentation technique et la conception visuelle de la plateforme.
 
-Mon travail a porté à la fois sur l'implémentation technique et sur la conception graphique de la plateforme.
+### Développement frontend
 
-### 💻 Développement frontend
+- Développement du site destiné aux étudiants avec React et TypeScript.
+- Création de composants réutilisables et d'interfaces utilisateur interactives.
+- Implémentation de l'affichage dynamique des pages et de la navigation frontend.
+- Intégration des fonctionnalités frontend avec l'API backend développée par les autres membres de l'équipe.
+- Amélioration de l'adaptabilité aux différents écrans et de l'ergonomie de la plateforme.
 
-- Développement du site étudiant avec React et TypeScript.
-- Création de composants réutilisables et d'interfaces interactives.
-- Implémentation de l'affichage dynamique des pages.
-- Gestion de la navigation frontend.
-- Intégration des fonctionnalités avec l'API backend développée par les autres membres de l'équipe.
-- Amélioration du responsive et de l'ergonomie générale.
+### Design UI/UX
 
-### 🎨 Design UI/UX
+- Conception de l'identité visuelle et de l'apparence générale du site.
+- Définition des mises en page, des palettes de couleurs, de la typographie et du style des composants.
+- Création d'une navigation intuitive et d'interfaces cohérentes.
+- Conception du site étudiant et des interfaces d'administration.
+- Attention particulière portée à l'accessibilité, à la lisibilité et à l'expérience utilisateur.
 
-- Conception de l'identité visuelle du site.
-- Définition des mises en page, des couleurs et de la typographie.
-- Création d'une navigation intuitive.
-- Harmonisation des composants et des interfaces.
-- Conception graphique du site étudiant et de l'administration.
-- Travail sur l'accessibilité, la lisibilité et l'expérience utilisateur.
+### Développement du CMS personnalisé
 
-### 🧩 Développement du CMS personnalisé
-
-- Développement de l'éditeur visuel permettant de créer et personnaliser les pages.
-- Implémentation de blocs de texte et d'images modifiables.
-- Création d'outils interactifs de positionnement et de redimensionnement.
+- Développement de l'éditeur visuel permettant de créer et de personnaliser les pages du site.
+- Implémentation de textes, d'images et de blocs de contenu modifiables.
+- Création d'outils interactifs pour positionner, redimensionner et modifier les éléments.
 - Développement de menus contextuels et de contrôles d'édition.
-- Implémentation des fonctionnalités de personnalisation des en-têtes, pieds de page et mises en page.
+- Implémentation de fonctionnalités de personnalisation du site, notamment les en-têtes, les pieds de page et les mises en page.
 
-### ⚙️ Interface d'administration
+### Interface d'administration
 
-- Développement du tableau de bord administrateur.
-- Création des interfaces de gestion des pages, utilisateurs et paramètres.
-- Implémentation des interactions frontend liées aux fonctionnalités administratives.
-- Intégration des composants d'administration avec les services backend.
+- Développement du tableau de bord administrateur et des interfaces de gestion.
+- Création d'interfaces pour gérer les pages, les utilisateurs et les paramètres du site.
+- Implémentation des interactions frontend pour les fonctionnalités administratives.
+- Intégration des composants d'administration avec les services backend de l'application.
 
-### 🧪 Tests et débogage
+### Tests et débogage
 
-- Tests des composants et des interactions frontend.
-- Identification et correction de bugs d'interface.
-- Amélioration de la stabilité des fonctionnalités.
-- Travail sur la maintenabilité du code.
+- Tests des composants frontend et des interactions.
+- Identification et correction des bugs d'interface.
+- Amélioration de la stabilité et de la maintenabilité des fonctionnalités frontend.
 
----
+## Collaboration en équipe
 
-## 🤝 Travail en équipe
+Ce projet a été développé en collaboration avec d'autres étudiants d'Epitech.
 
-Ce projet a été réalisé en collaboration avec d'autres étudiants d'Epitech.
+Mes responsabilités étaient principalement axées sur le développement frontend, le design UI/UX, le CMS personnalisé et les interfaces d'administration. Le développement backend et la gestion de la base de données ont été assurés par les autres membres de l'équipe.
 
-La répartition des responsabilités était la suivante :
-
-**Mes responsabilités :**
-- Développement frontend.
-- Design UI/UX.
-- Développement du CMS visuel.
-- Interfaces d'administration.
-
-**Responsabilités des autres membres de l'équipe :**
-- Développement backend.
-- Gestion de la base de données.
-- Services et logique côté serveur.
-
-Cette collaboration m'a permis de travailler sur une application full-stack tout en approfondissant mes compétences en développement frontend et en conception d'interfaces.
-
----
-
-## 📁 Structure du projet
+## Structure du projet
 
 ```text
 epitech-berlin-platform/
-├── front/               # Application React et CMS
-├── back/                # API Express et modèles de données
-├── docker-compose.yml   # Configuration Docker
+├── front/               # Frontend React et interface CMS
+├── back/                # API Express et modèles de base de données
+├── docker-compose.yml   # Configuration Docker pour le développement
 └── README.md
 ```
 
----
-
-## 🚀 Installation locale
+## Installation et démarrage
 
 ### Prérequis
 
-Avant de commencer, assurez-vous de disposer de :
-
-- Node.js et npm.
-- Une base de données MongoDB locale ou MongoDB Atlas.
-- Git.
+- Node.js et npm
+- Une base de données MongoDB (locale ou MongoDB Atlas)
 
 ### 1. Cloner le dépôt
 
@@ -193,7 +133,7 @@ cd back
 npm install
 ```
 
-Copier le fichier `.env.example` vers `.env`, puis renseigner les variables d'environnement nécessaires :
+Copiez le fichier `.env.example` vers `.env` et configurez les variables d'environnement nécessaires :
 
 ```env
 PORT=5000
@@ -204,7 +144,7 @@ ADMIN_PASSWORD=your_admin_password
 ADMIN_NAME=Admin
 ```
 
-**Attention :** ne jamais publier de véritables identifiants ou fichiers `.env` sur GitHub.
+Ne publiez jamais de véritables identifiants ou fichiers d'environnement dans le dépôt.
 
 ### 3. Démarrer le backend
 
@@ -214,7 +154,7 @@ npm run dev
 
 ### 4. Démarrer le frontend
 
-Ouvrir un second terminal à la racine du projet :
+Ouvrez un terminal séparé depuis la racine du dépôt :
 
 ```bash
 cd front
@@ -222,137 +162,99 @@ npm install
 npm run dev
 ```
 
-Le frontend est alors accessible à l'adresse :
+Le frontend devrait être accessible à l'adresse :
 
-**http://localhost:5173**
+http://localhost:5173
 
----
+## Captures d'écran
 
-## 📸 Captures d'écran
+### Page d'accueil
 
-### 🏠 Page d'accueil
+screenshot1
 
-Présentation de la plateforme et accès aux principales rubriques.
+### Vie étudiante
 
-![Page d'accueil](docs/screenshots/screenshot1.png)
+screenshot2
 
-### 🎓 Vie étudiante
+### Activités
 
-Informations sur le campus et le quotidien des étudiants à Berlin.
+screenshot3
 
-![Vie étudiante](docs/screenshots/screenshot2.png)
+### Page des musées
 
-### 🎉 Activités
+screenshot4
 
-Découverte des activités et des lieux à explorer à Berlin.
+### Tableau de bord administrateur
 
-![Activités](docs/screenshots/screenshot3.png)
+screenshot5
 
-### 🏛️ Musées
+### Éditeur visuel CMS
 
-Présentation des musées et des lieux culturels de Berlin.
+screenshot6
 
-![Page Musées](docs/screenshots/screenshot4.png)
+## Statut du projet
 
-### ⚙️ Tableau de bord administrateur
+Projet académique collaboratif développé à Epitech.
 
-Interface permettant de gérer les contenus et les paramètres de la plateforme.
+Ce dépôt présente l'architecture frontend de l'application, le CMS personnalisé, les interfaces d'administration et les services backend associés.
 
-![Tableau de bord administrateur](docs/screenshots/screenshot5.png)
+## Auteur et contributeurs
 
-### 🎨 Éditeur visuel CMS
+**Quentin Charillon**
 
-Outil permettant de modifier les pages et leurs contenus directement depuis l'interface d'administration.
+Étudiant à Epitech | Développement frontend | Design UI/UX | Expérience en projet full-stack
 
-![Éditeur visuel CMS](docs/screenshots/screenshot6.png)
-
----
-
-## 🌐 Démonstration en ligne
-
-La plateforme est actuellement déployée et accessible en ligne.
-
-### 🎓 Site étudiant
-
-**[🌍 Visiter Epitech Berlin Student Platform](https://epitech-berlin-platform.vercel.app/)**
-
-Découvrez les différentes pages du site, les informations pratiques et les fonctionnalités destinées aux étudiants.
-
-### 🛠️ Interface d'administration
-
-Une interface d'administration permet de découvrir le fonctionnement du CMS et des outils de personnalisation.
-
-Un compte de démonstration à permissions limitées peut être mis à disposition des recruteurs et développeurs souhaitant tester ces fonctionnalités.
-
-Il permet notamment de découvrir :
-
-- Le tableau de bord administrateur.
-- La création et la modification de pages.
-- L'éditeur visuel.
-- La personnalisation des textes et images.
-- La configuration des en-têtes et pieds de page.
-- Les outils interactifs de mise en page.
-- Les paramètres de personnalisation du site.
-
-Les identifiants de démonstration doivent être communiqués de manière sécurisée et ne doivent pas donner accès à des données sensibles ou à des fonctions administratives critiques.
-
-### ⏳ Temps de chargement
-
-Le backend est hébergé sur l'offre gratuite de Render.
-
-Après une période d'inactivité, le serveur peut être automatiquement mis en veille.
-
-Lors de la première visite, le chargement des données peut prendre environ **30 à 60 secondes**, parfois davantage, le temps que le serveur redémarre.
-
-Les requêtes suivantes sont généralement beaucoup plus rapides.
-
-Merci de votre patience !
-
----
-
-## ☁️ Architecture de déploiement
-
-| Composant | Hébergement |
-|---|---|
-| Frontend React | Vercel |
-| Backend Express | Render |
-| Base de données MongoDB | MongoDB Atlas |
-
-Cette architecture permet de séparer l'interface utilisateur, les services backend et le stockage des données.
-
----
-
-## 📌 Statut du projet
-
-**Projet académique collaboratif développé à Epitech.**
-
-Ce dépôt met en valeur :
-
-- L'architecture frontend de l'application.
-- Le développement d'un CMS personnalisé.
-- La conception des interfaces d'administration.
-- L'intégration avec les services backend.
-- La collaboration au sein d'une équipe de développement.
-
----
-
-## 👨‍💻 Auteur et contributeurs
-
-### Quentin Charillon
-
-Étudiant à **Epitech Lyon**.
-
-**Spécialisations et centres d'intérêt :**
-- Développement frontend.
-- Design UI/UX.
-- Développement web full-stack.
-- Intelligence artificielle.
-- Conception d'interfaces interactives.
-
-**Contributions principales au projet :** développement frontend, design UI/UX, CMS personnalisé et interfaces d'administration.
+**Contributions principales :** développement frontend, design UI/UX, CMS personnalisé et interfaces d'administration.
 
 **Backend et base de données :** développés par les autres membres de l'équipe.
 
-🐙 **[Mon profil GitHub](https://github.com/quentin-charillon)**
+## 🌐 Démonstration en ligne et accès administrateur
 
-🌐 **[Découvrir la plateforme](https://epitech-berlin-platform.vercel.app/)**
+La plateforme étudiante Epitech Berlin est déployée et accessible en ligne.
+
+**Remarque :** ce projet utilise l'offre d'hébergement gratuite de Render pour le backend, qui se met automatiquement en veille après une période d'inactivité.
+
+Par conséquent, lors de la première visite, le chargement des données peut prendre environ 30 à 60 secondes, le temps que le serveur se réveille.
+
+Merci de votre patience ! Les requêtes suivantes devraient être beaucoup plus rapides.
+
+### Site étudiant
+
+🔗 **[Visiter la plateforme étudiante](https://epitech-berlin-platform.vercel.app/)**
+
+Explorez le site web, découvrez la vie étudiante à Berlin et naviguez entre les différentes pages.
+
+### 🛠️ Tester le tableau de bord administrateur
+
+🔗 **Accéder au tableau de bord administrateur**
+
+Vous souhaitez découvrir comment fonctionne la plateforme en coulisses ?
+
+Un compte administrateur de démonstration est disponible pour les recruteurs, les développeurs et les visiteurs souhaitant tester le CMS personnalisé.
+
+**Identifiants de démonstration :**
+
+Email : quentin.charillon@epitech.eu
+
+Mot de passe : [mot de passe du compte de démonstration]
+
+Avec ce compte, vous pouvez :
+
+- Explorer le tableau de bord administrateur
+- Créer et modifier des pages du site
+- Personnaliser le contenu grâce à l'éditeur visuel CMS
+- Modifier les textes, les images, les en-têtes et les pieds de page
+- Tester les outils d'édition interactifs
+- Explorer les paramètres du site et les fonctionnalités de personnalisation
+
+N'hésitez pas à expérimenter avec le CMS et à découvrir ses fonctionnalités !
+
+## Architecture de déploiement
+
+**Frontend :** Vercel
+
+**Backend :** Render
+
+**Base de données :** MongoDB Atlas
+
+## Profil GitHub
