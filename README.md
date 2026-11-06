@@ -170,27 +170,27 @@ http://localhost:5173
 
 ### Page d'accueil
 
-![Page d'accueil](screenshots/accueil.png)
+![Page d'accueil](screenshots/homepage.png)
 
 ### Vie étudiante
 
-screenshot2
+![Page d'accueil](screenshots/studentlife.png)
 
 ### Activités
 
-screenshot3
+![Page d'accueil](screenshots/activitypage.png)
 
 ### Page des musées
 
-screenshot4
+![Page d'accueil](museumspage.png)
 
 ### Tableau de bord administrateur
 
-screenshot5
+![Page d'accueil](dashboardpage.png)
 
 ### Éditeur visuel CMS
 
-screenshot6
+![Page d'accueil](editorpage.png)
 
 ## Statut du projet
 
