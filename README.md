@@ -186,11 +186,11 @@ http://localhost:5173
 
 ### Tableau de bord administrateur
 
-![Page d'accueil](dashboardpage.png)
+![Page d'accueil](screenshots/dashboardpage.png)
 
 ### Éditeur visuel CMS
 
-![Page d'accueil](editorpage.png)
+![Page d'accueil](screenshots/editorpage.png)
 
 ## Statut du projet
 
